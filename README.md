@@ -1,4 +1,4 @@
-# 🥬 Savor
+# 🥬 Savora
 
 ---
 
