@@ -15,8 +15,17 @@ def render_purchase_date_input():
     days_since_purchase = (date.today() - selected_date).days
 
     if days_since_purchase == 0:
-        st.caption("Bought today")
+       st.markdown(
+        "<div style='margin-top:6px; font-size:14px; color:#f3f4f6;'>Bought today</div>",
+        unsafe_allow_html=True,
+        )
     elif days_since_purchase == 1:
-        st.caption("Bought 1 day ago")
+        st.markdown(
+        "<div style='margin-top:6px; font-size:14px; color:#f3f4f6;'>Bought 1 day ago</div>",
+        unsafe_allow_html=True,
+        )
     else:
-        st.caption(f"Bought {days_since_purchase} days ago")
+        st.markdown(
+        f"<div style='margin-top:6px; font-size:14px; color:#f3f4f6;'>Bought {days_since_purchase} days ago</div>",
+        unsafe_allow_html=True,
+        )

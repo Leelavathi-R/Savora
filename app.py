@@ -18,7 +18,20 @@ left, center, right = st.columns([1.15, 2.1, 1.25], gap="medium")
 
 with center:
     st.markdown('<div class="center-panel">', unsafe_allow_html=True)
-    st.markdown('<div class="app-title">🥬 Savora</div>', unsafe_allow_html=True)
+    st.markdown(
+    """
+    <div class="app-title">
+        🥬 
+        <span class="s1">S</span>
+        <span class="s2">a</span>
+        <span class="s3">v</span>
+        <span class="s4">o</span>
+        <span class="s5">r</span>
+        <span class="s6">a</span>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
     st.markdown('<div class="app-subtitle">Reduce waste. Save money. Eat smarter.</div>', unsafe_allow_html=True)
 
     render_item_input()

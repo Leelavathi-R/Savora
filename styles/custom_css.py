@@ -102,7 +102,7 @@ def load_custom_css():
 }}
 
 .true-card .recipes-title {{
-    color: #f59e0b !important;
+    color: #ffffff !important;
 }}
 
 .true-card-item-title {{
@@ -202,9 +202,11 @@ def load_custom_css():
 }}
 
 .center-panel {{
-    background: rgba(8, 15, 28, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background:
+        linear-gradient(
+            rgba(8, 15, 28, 0.75),
+            rgba(8, 15, 28, 0.55)
+        );
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 24px;
     padding: 18px 20px 20px 20px;
@@ -216,15 +218,25 @@ def load_custom_css():
 }}
 
 .app-title {{
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 0.2rem;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 0.3rem;
+    color: #ffffff;
+
+    /* glow + contrast */
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.6),
+        0 0 12px rgba(255,255,255,0.25);
+
+    letter-spacing: 0.5px;
 }}
 
 .app-subtitle {{
-    font-size: 1rem;
-    color: #d1d5db;
-    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #e5e7eb;
+    margin-bottom: 1.2rem;
+
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }}
 
 div.stButton > button {{
@@ -386,7 +398,17 @@ div[data-baseweb="select"] div {{
     content: "...";
     animation: blink 1.2s infinite;
 }}
+.s1 {{ color: #f97316; }}  /* orange */
+.s2 {{ color: #22c55e; }}  /* green */
+.s3 {{ color: #3b82f6; }}/* blue */
+.s4 {{ color: #eab308; }}  /* yellow */
+.s5 {{ color: #ec4899; }} /* pink */
+.s6 {{ color: #a855f7; }}  /* purple */
 
+/* optional glow */
+.app-title span {{
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}}
 
 </style>
 """, unsafe_allow_html=True)
