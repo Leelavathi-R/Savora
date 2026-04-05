@@ -3,7 +3,7 @@ from google import genai
 import json
 import streamlit as st
 
-client = genai.Client(api_key="AIzaSyBh1XL_e1GZHr2imzb3Rp90DZEdVPVr2rc")
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 def normalize_context(context_list: list[str]) -> set[str]:
     mapping = {
