@@ -1,5 +1,5 @@
 WEIGHT_DATA = {
-    "milk": 1.0,
+    "milk": 3.8,
     "yogurt": 0.15,
     "cheese": 0.23,
     "eggs": 0.68,

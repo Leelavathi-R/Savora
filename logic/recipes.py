@@ -27,7 +27,7 @@ def get_priority_items(results: list[dict]) -> list[str]:
 
     return priority
 
-def suggest_recipes(results: list[dict], lifestyle_context: list[str], top_k: int = 3) -> list[dict]:
+def suggest_llm_recipes(results: list[dict], lifestyle_context: list[str], top_k: int = 3) -> list[dict]:
     priority_items = get_priority_items(results)
     preferred_tags = normalize_context(lifestyle_context)
 
@@ -94,7 +94,7 @@ def suggest_recipes(results: list[dict], lifestyle_context: list[str], top_k: in
         st.error(f"Recipe generation error: {e}")
         return []
 
-def suggest_rule_recipes(results: list[dict], lifestyle_context: list[str], top_k: int = 3) -> list[dict]:
+def suggest_recipes(results: list[dict], lifestyle_context: list[str], top_k: int = 3) -> list[dict]:
     priority_items = set(get_priority_items(results))
     preferred_tags = normalize_context(lifestyle_context)
 
